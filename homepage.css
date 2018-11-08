@@ -1,0 +1,50 @@
+/*homepage.css*/
+
+ * {
+    box-sizing: border-box;
+}
+
+
+#yourGroups{
+    text-align: center;
+    background-color:aqua;
+    text-decoration: underline;
+}
+
+#you{
+    text-align: center;
+    background-color:red;
+    text-decoration: underline;
+}
+
+#goingTo{
+    text-align: center;
+    background-color:yellowgreen;
+    text-decoration: underline;
+} 
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 200px;
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header {
+    padding: 10px;
+    text-align: center;
+    background: #168530;
+    color: white;
+    font-size: 30px;
+}
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+}
