@@ -1,0 +1,88 @@
+
+/*******CSS FOR PROFILE PAGE*******/
+
+* {
+	background-color: #011A27;
+}
+
+h1 {
+	background-color: #063852;
+	font-size: 300%;
+	color: #F0810F;
+	text-align: center;
+	height: 60px;
+}
+
+h2 {
+    color: #F0810F;
+    background-color: #063852;
+    text-align: center;
+    height: 30px;
+}
+
+ul li {
+	padding: 15px;
+	border: 1px double #6F7C80;
+	margin-top: 30px;
+	margin-left: -30px;
+}
+
+/************** CLASSES ************/
+
+.column {
+    float: left;
+    text-align: left;
+    padding: 10px;
+    width: 35%;
+    color: #F0810F;
+}
+
+.right {
+	float: right;
+	width: 55%;
+	height: 80%;
+}
+
+.topLeft {
+	height: 20%;
+}
+
+.bottomLeft {
+	height: 60%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header {
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p.yourInfo {
+	border: 1px double #6F7C80;
+	height: 200px;
+}
+
+
+ul.yourInterests {
+
+}
+
+.seeMore {
+	font-size: 80%;
+	text-decoration: underline;
+	text-align: right;
+}
+
+.seeMore:hover {
+	color: #E6DF44;
+}
