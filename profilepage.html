@@ -4,37 +4,90 @@
 <head>
 	<title>EF: You</title>
 	<link rel="stylesheet" type="text/css" href="profilepage.css">
+	<script src="profilepage.js"></script>
 </head>
 
 <body>
-
 	<h1> YOU </h1>
 
-	<div class="row";>
-		<div class="column topLeft";>
+	<div class="row">
+		<div class="column topLeft">
 			<h2>YOUR INFO</h2>
-			<p class="yourInfo";>
-				Name: Duane Thetub<br/>
-				Location: Winnipeg, Manitoba (R2M 1V6)<br/>
-				Age: Old Enough<br/>
-
+			<p class="yourInfo">
+				<b>Name:</b> Duane Thetub<br/><br/>
+				<b>Location:</b> Winnipeg, Manitoba (R2M 1V6)<br/><br/>
+				<b>Age:</b> Old Enough<br/><br/>
 			</p>  
-			<hr width="110%";>
+			<hr>
 		</div>	
 
-		<div class="column right";>
+		<div class="column bigRight">
 			<h2>BROWSE INTERESTS</h2>
 
-			<ul class="yourInterests";>
-				<li>Basket Weaving</li>
-	  			<li>Soccer</li>
-	 			<li>Birthday Parties</li>
-	  			<li>Fly Taming</li>
-	  			<li>Meme Frying</li>
-	  			<li>Reddit</li>
-	  			<li>Netflix</li>
-	  			<li>Cards</li>
-	  		</ul>
+			<div class="row">
+				<div class="innerColumn innerLeft">
+			
+					<label class="container" id="bskt" onclick="display()">Basket Weaving
+				  		<input type="checkbox">
+				  		<span class="checkmark"></span>
+					</label>
+			  			
+			  		<label class="container">Soccer
+			  			<input type="checkbox">
+				  		<span class="checkmark"></span>
+				  	</label>
+
+			  		<label class="container">Partying Hard
+			  			<input type="checkbox">
+				  		<span class="checkmark"></span>
+				  	</label>
+
+
+			  	</div>
+
+			  	<div class="innerColumn innerMid">
+
+			  		<label class="container">Fly Wrangling
+			  			<input type="checkbox">
+				  		<span class="checkmark"></span>
+				  	</label>
+
+
+			  		<label class="container">Meme Frying
+			  			<input type="checkbox">
+				  		<span class="checkmark"></span>
+				  	</label>
+
+
+			  		<label class="container">Reddit
+			  			<input type="checkbox">
+				  		<span class="checkmark"></span>
+				  	</label>
+
+			  	</div>
+
+			  	<div class="innerColumn innerRight">
+
+			  		<label class="container">Netflix
+			  			<input type="checkbox">
+				  		<span class="checkmark"></span>
+				  	</label>
+
+
+			  		<label class="container">Cards
+			  			<input type="checkbox">
+				  		<span class="checkmark"></span>
+				  	</label>
+
+
+			  		<label class="container">Aqua-Fitness
+			  			<input type="checkbox">
+				  		<span class="checkmark"></span>
+				  	</label>
+
+			  	</div>
+
+			 </div>
 
 			<p class="seeMore";> See more...</p>
 		</div>
