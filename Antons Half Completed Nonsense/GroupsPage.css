@@ -1,0 +1,137 @@
+.groupNav {
+    float: left;
+    width:100%;
+    padding: 10px;
+    height: 60px;
+    text-align: center;
+    background-color: rgb(238, 233, 211);
+
+}
+
+.groupNav button{
+    border: none;
+    border-bottom: solid black;
+    background-color: inherit;
+    float: left;
+    font-size: 30px;
+    width: 25%;
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+}
+
+.groupNav button:hover{
+    text-decoration: none;
+    background-color: #7e39ba;
+}
+
+.groupNav button.active{
+    border: solid black;
+    border-bottom:none; 
+}
+
+.columnContent{
+    display: none;
+    background-color: rgb(238, 233, 211);
+}
+
+#yourGroups{
+    display: block;
+    background-color: rgb(238, 233, 211);
+}
+
+
+
+
+
+
+.groupInformation {
+    display: none;
+}
+
+.eventrow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side {
+    flex: 40%;
+    background-color: #6D7993;
+    padding: 20px;
+}
+
+.main {
+    flex: 60%;
+    background-color: #9099A2;
+    padding: 20px;
+    text-align: center;
+}
+
+.groupImg {
+    float: left;
+    width: 25%;
+    height: 50%;
+}
+
+.descript {
+    float: 30%;
+    font-size: 20px;
+    text-align: left;
+}
+
+.highlight {
+    background-color: lightgreen;
+}
+
+#newDisplay {
+    /* background-color: lightcoral; */
+}
+
+#groupList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+#groupList li {
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    margin-top: -1px;
+    
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    border-color: black;
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+}
+
+#groupList li:hover{
+    background-color: #dddddd;
+    color: black;
+}
+
+input[type=text] {
+    width: 40%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    text-align: left;
+}
+
+#moreButton {
+    width: 30%;
+    padding: 12px 5px;
+    margin: 8px 0;
+    display: inline-block;
+    text-align: center;
+    border: none;
+}
+
+#moreButton:hover {
+    background-color: antiquewhite;
+}
+

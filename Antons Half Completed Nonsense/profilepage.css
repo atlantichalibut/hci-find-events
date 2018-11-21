@@ -1,0 +1,130 @@
+
+/*******CSS FOR PROFILE PAGE*******/
+
+
+
+h2.profileHeader {
+    color: #F0810F;
+    background-color: #063852;
+    text-align: center;
+    height: 30px;
+}
+
+hr {
+	color: #063852;
+}
+
+/************** CLASSES ************/
+
+.profileColumn {
+    float: left;
+    text-align: left;
+    padding: 10px;
+    width: 35%;
+    color: #F0810F;
+    background-color: #011A27;
+}
+
+.bigRight {
+	float: right;
+	width: 55%;
+	height: 80%;
+}
+
+.topLeft {
+	height: 20%;
+}
+
+.bottomLeft {
+	height: 60%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+p.yourInfo {
+	border: 1px double #404040;
+	height: 100px;
+	padding: 10px;
+}
+
+.seeMore {
+	font-size: 80%;
+	text-decoration: underline;
+    border: none;
+    float: right;
+    color: #F0810F;
+    background-color: #063852;
+    padding: 6px;
+    margin-left: 40%;
+}
+
+.seeMore:hover {
+	color: #E6DF44;
+	cursor: pointer;
+    border: none;
+}
+
+#otherIntList {
+    list-style-type: none;
+    padding: 2px;
+    margin: 0;
+}
+
+#otherIntList li {
+    display: inline-block;
+    width: 29%;
+    border: 1px double #404040;
+    padding: 15px;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+}
+
+#yourIntList {
+    list-style-type: none;
+    padding: 2px;
+    margin: 0;
+}
+
+#yourIntList li {
+    display: block;
+    border: 1px double #404040;
+    padding: 15px;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+}
+
+#addButton {
+    width: 120px;
+    margin-left: 42.5%;
+    font-size: 200%;
+    text-decoration: underline;
+    border: 2px solid #404040;
+    color: #8e4600;
+    background-color: #011A27;
+}
+
+#addButton:hover {
+
+}
+
+.interestInformation {
+    display: none;
+}
+
+
