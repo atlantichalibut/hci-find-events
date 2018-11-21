@@ -1,16 +1,8 @@
 
 /*******CSS FOR PROFILE PAGE*******/
 
-* {
-	background-color: #011A27;
-}
-
-h1 {
-	background-color: #063852;
-	font-size: 300%;
-	color: #F0810F;
-	text-align: center;
-	height: 60px;
+body {
+    background-color: #011A27;
 }
 
 h2 {
@@ -24,13 +16,6 @@ hr {
 	color: #063852;
 }
 
-ul li {
-	padding: 15px;
-	border: 1px double #404040;
-	margin-top: 30px;
-	margin-left: -30px;
-}
-
 /************** CLASSES ************/
 
 .column {
@@ -39,6 +24,7 @@ ul li {
     padding: 10px;
     width: 35%;
     color: #F0810F;
+    background-color: #011A27;
 }
 
 .bigRight {
@@ -61,31 +47,12 @@ ul li {
     clear: both;
 }
 
-.innerColumn
-{
-	float: left;
-	text-align: left;
-	width: 33%;
-	color: #F0810F;
-}
-
-.innerLeft {
-	float: left;
-}
-
-.innerMid {
-	margin-left: 3px;
-	margin-right: 3px;
-}
-
-.innerRight {
-	float: right;
-}
-
 .header {
     padding: 10px;
     text-align: center;
     font-size: 30px;
+    background-color: #063852;
+    color: #F0810F;
 }
 
 .body {
@@ -98,97 +65,78 @@ p.yourInfo {
 	padding: 10px;
 }
 
-
-li.newInterest:hover {
-	background-color: #404040;
-}
-
 .seeMore {
 	font-size: 80%;
 	text-decoration: underline;
-	text-align: right;
+    border: none;
+    float: right;
+    color: #F0810F;
+    background-color: #063852;
+    padding: 6px;
+    margin-left: 40%;
 }
 
 .seeMore:hover {
 	color: #E6DF44;
 	cursor: pointer;
+    border: none;
 }
 
+#otherIntList {
+    list-style-type: none;
+    padding: 2px;
+    margin: 0;
+}
 
+#otherIntList li {
+    display: inline-block;
+    width: 29%;
+    border: 1px double #404040;
+    padding: 15px;
 
-
-/**************** Special Interests Button ********************/
-
-/* The container */
-.container {
-    display: block;
-    position: relative;
-    margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    overflow: hidden;
+}
 
+#yourIntList {
+    list-style-type: none;
+    padding: 2px;
+    margin: 0;
+}
+
+#yourIntList li {
+    display: block;
+    border: 1px double #404040;
     padding: 15px;
-	border: 1px double #404040;
-}
 
-/* Hide the browser's default checkbox */
-.container input {
-    position: absolute;
-    opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
 }
 
-/* Create a custom checkbox */
-.checkmark {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 25px;
-    height: 25px;
+#addButton {
+    width: 120px;
+    margin-left: 42.5%;
+    font-size: 200%;
+    text-decoration: underline;
+    border: 2px solid #404040;
+    color: #8e4600;
     background-color: #011A27;
 }
 
-.container:hover {
-	background-color: #404040;
+#addButton:hover {
+
 }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-    background-color: #ccc0;
-}
-
-/* When the checkbox is checked, add an ORANGE background */
-.container input:checked ~ .checkmark {
-    background-color: #F0810F;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-    content: "";
-    position: absolute;
+.interestInformation {
     display: none;
 }
 
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-    display: block;
-}
 
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}

@@ -5,109 +5,99 @@
 	<title>EF: You</title>
 	<link rel="stylesheet" type="text/css" href="profilepage.css">
 	<script src="profilepage.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+	</script>
 </head>
 
-<body>
-	<h1> YOU </h1>
+<body onload = "start();">
 
-	<div class="row">
+	<div class = "header">
+		<h1> YOUR PROFILE </h1>
+		<button>GROUPS</button>
+		<button onclick="window.location.href='main.html'">HOME</button>
+		<button onclick="window.location.href='events.html'">EVENTS</button>
+	</div>
+
+	<div class ="row">
+
 		<div class="column topLeft">
 			<h2>YOUR INFO</h2>
 			<p class="yourInfo">
 				<b>Name:</b> Duane Thetub<br/><br/>
 				<b>Location:</b> Winnipeg, Manitoba (R2M 1V6)<br/><br/>
 				<b>Age:</b> Old Enough<br/><br/>
-			</p>  
+			</p>
 			<hr>
-		</div>	
-
-		<div class="column bigRight">
-			<h2>BROWSE INTERESTS</h2>
-
-			<div class="row">
-				<div class="innerColumn innerLeft">
-			
-					<label class="container" id="bskt" onclick="display()">Basket Weaving
-				  		<input type="checkbox">
-				  		<span class="checkmark"></span>
-					</label>
-			  			
-			  		<label class="container">Soccer
-			  			<input type="checkbox">
-				  		<span class="checkmark"></span>
-				  	</label>
-
-			  		<label class="container">Partying Hard
-			  			<input type="checkbox">
-				  		<span class="checkmark"></span>
-				  	</label>
-
-
-			  	</div>
-
-			  	<div class="innerColumn innerMid">
-
-			  		<label class="container">Fly Wrangling
-			  			<input type="checkbox">
-				  		<span class="checkmark"></span>
-				  	</label>
-
-
-			  		<label class="container">Meme Frying
-			  			<input type="checkbox">
-				  		<span class="checkmark"></span>
-				  	</label>
-
-
-			  		<label class="container">Reddit
-			  			<input type="checkbox">
-				  		<span class="checkmark"></span>
-				  	</label>
-
-			  	</div>
-
-			  	<div class="innerColumn innerRight">
-
-			  		<label class="container">Netflix
-			  			<input type="checkbox">
-				  		<span class="checkmark"></span>
-				  	</label>
-
-
-			  		<label class="container">Cards
-			  			<input type="checkbox">
-				  		<span class="checkmark"></span>
-				  	</label>
-
-
-			  		<label class="container">Aqua-Fitness
-			  			<input type="checkbox">
-				  		<span class="checkmark"></span>
-				  	</label>
-
-			  	</div>
-
-			 </div>
-
-			<p class="seeMore";> See more...</p>
 		</div>
 
-		<div class="column bottomLeft";>
-			<h2> YOUR INTERESTS </h2>
-			<ul>
-				<li>Soccer Game</li>
-	 			<li>Fishing</li>
-	  			<li>Ink Brewing</li>
-	  			<li>Fixing Computers</li>
-	  			<li>Programming</li>
-	  			<li>Video Games</li>
-			</ul>
-			<p class="seeMore";> See more...</p>
-		</div>
+    	<div class = "column bigRight">
+                <h2>ADD INTERESTS</h2>
+                   	<input  id="myInput" type="text" onkeyup="selectInt()" placeholder="Search for more..." title="Type in an interest">
+            	<ol id = "otherIntList"></ol>
+            	<button id="addButton" type="button" onclick="addSelected()">Add</button>
+            	<button id="moreButton" class="seeMore" type ="button" onclick="showInt()">See more...</button>
+        </div>
 
+    	<div class ="column bottomLeft">
+    		<h2>YOUR INTERESTS</h2>
+            <input  id="myInput" type="text" onkeyup="selectInt()" placeholder="Search your interests..." title="Type in an interest">
+            <ol id = "yourIntList"></ol>
+            <button id="moreButton" type ="button" class="seeMore" onclick="showInt()">See more...</button>
+        </div>
 
 	</div>
 
+
+
+
+
+	<div class="interestInformation">
+		<label class="interest">
+			<h2 id="title">Soccer </h2>
+		</label>
+		<div class="interest">
+			<h2 id="title">Fishing  </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Ink Brewing </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Computer Repair  </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Programming </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Video Games </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Tennis </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Fine Dining </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Dogs </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Mixed Martial Arts </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Country Music </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Basket Weaving </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Partying </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Aqua Fitness </h2>
+		</div>
+		<div class="interest">
+			<h2 id="title">Cross Country </h2>
+		</div>
+	</div>
 </body>
 
 </html>
