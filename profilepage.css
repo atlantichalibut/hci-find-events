@@ -1,11 +1,9 @@
 
 /*******CSS FOR PROFILE PAGE*******/
 
-body {
-    background-color: #011A27;
-}
 
-h2 {
+
+h2.profileHeader {
     color: #F0810F;
     background-color: #063852;
     text-align: center;
@@ -18,7 +16,7 @@ hr {
 
 /************** CLASSES ************/
 
-.column {
+.profileColumn {
     float: left;
     text-align: left;
     padding: 10px;
@@ -47,17 +45,7 @@ hr {
     clear: both;
 }
 
-.header {
-    padding: 10px;
-    text-align: center;
-    font-size: 30px;
-    background-color: #063852;
-    color: #F0810F;
-}
 
-.body {
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 p.yourInfo {
 	border: 1px double #404040;

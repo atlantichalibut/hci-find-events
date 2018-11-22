@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" type = "text/css" href = "GroupsPage.css">
+    <link rel = "stylesheet" type = "text/css" href = "newEventStyle.css">
+    <link rel="stylesheet" type="text/css" href="profilepage.css">
+    <link rel="stylesheet" type="text/css" href="mainpage.css">
+
+
+    <script src="profilepage.js"></script>
+    <script src="eventsSelection.js"></script>
+    <script src="groupspage.js"></script>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+
+<body onload = "eventStart(); profileStart(); GroupStart();">
+    
+    
+
+    
+
+    <div class="navContent" id="groupsPage">
+
+        <div class = "header">
+            <h1>Groups</h1>
+            <div class="header-btn">
+                <button class = "tab" onclick="openTab(event, 'invites'); mainNav(event, 'groupsPage');"></button>
+                <button class="nav" onclick="mainNav(event, 'profilePage')"></button>
+                </div>
+        </div>
+            <div class = "globalNav">
+                <div class = "buttonDiv"></div>
+                <div class = "buttonDiv">
+                    <button class = "nav active" onclick="mainNav(event, 'groupsPage')">
+                        Groups
+                    </button>
+                </div>
+                <div class = "buttonDiv">
+                    <button class = "nav" onclick="mainNav(event, 'homePage')">
+                        Home
+                    </button>
+                </div>
+                <div class = "buttonDiv">
+                    <button class = "nav" onclick="mainNav(event, 'eventsPage')">
+                        Events
+                    </button>
+                </div>
+                <div class="buttonDiv"></div>
+                </div>
+
+        <div class = "groupNav">
+
+            <button class = "tab active" onclick="openTab(event, 'yourGroups')">
+                Your Groups
+            </button>
+
+            <button class = "tab" onclick="openTab(event, 'browseGroups')">
+                Browse Groups
+            </button>
+
+            <button class = "tab" onclick="openTab(event, 'invites')">
+                Invites
+            </button>   
+
+            <button class = "tab" onclick="openTab(event, 'createGroup')">
+               Create Group
+            </button>
+         </div>
+
+                <div class="columnContent" id = "yourGroups">
+                    <h3>Your Groups</h3>
+                    <div class ="eventrow"> 
+                        <div class ="side">
+                            <input type="text" id="myInput" onkeyup="selectGroup()" placeholder="Search for a Group.." title="Type in a name">
+                            <ol class = "listStyle" id = "yourGroupsList">
+                                <li class =  "myGroup" id="1" onclick="displayMyGroup(this)"><p>Test<p></li>
+                            </ol>
+                            <button id="moreButton" type ="button" onclick="showGroups()">Show More</button> 
+
+                        </div>
+                
+                        <div class = "main">
+                            <div>
+                                <h2 id = "yourgroupDisplay"></h2>
+                                <p id="yourgroupDescription"></p>
+                                <button id = "leaveGroupButton" onclick="removeFromMyGroups()">Leave Group</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                    
+                </div>
+                <div class="columnContent" id = "browseGroups">
+                    <h3>Browse Groups</h3>
+                    <div class ="eventrow"> 
+                        <div class ="side">
+                            <input type="text" id="myInput" onkeyup="selectGroup()" placeholder="Search for a Group.." title="Type in a name">
+                            <button id="moreButton" type ="button" onclick="showGroups()">Show More</button> 
+                            <ol class = "listStyle" id = "groupList"></ol>
+                        </div>
+                
+                        <div class = "main">
+                            <div>
+                                <h2 id = "groupDisplay"></h2>
+                                <p id="groupDescription"></p>
+                                <button id = "joinGroupButton" onclick="addToMyGroups()">Join Group</button>
+                                <button id = "leaveMyGroupButton" onclick="removeFromMyGroups()">Leave Group</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                    <div class = "groupInformation">
+                            <div class = "group">
+                                <h2 id = "EventTitle">Test Group #1</h2>
+                                <img src = "eventPics/applePicking.jpg" alt="apples"> 
+                                <p class= "descript">Do you like Sunday's and do you like Apples? Well looks like I've got
+                                    the thing for you! Come down to my farm to pick some sweet red apples. They're the best around!
+                                    No cost at all! (I've got waaay too many).
+                                </p>
+                                <button>Join Group</button>
+                            </div>
+                            <div class = "group">
+                                <h2>Test Group #2</h2>
+                                <img src = "eventPics/eelSwallowing.png" alt="eel">
+                                <p class= "descript"></p>
+                                <button>Join Group</button>
+                            </div>
+                            <div class = "group">
+                                <h2>Test Group #3</h2>
+                                <img src ="eventPics/dungeonsAndDragons.jpg" alt="paper and dice"> 
+                                <p class= "descript"></p>
+                                <button>Join Group</button>
+                            </div>
+                            <div class = "group">
+                                <h2>Test Group #4</h2>
+                                <img src = "eventPics/starwars.png">
+                                <p class= "descript"></p>
+                                <button>Join Group</button>
+                            </div>
+                            <div class = "group">
+                                <h2>Test Group #5</h2>
+                                <img src = "eventPics/scotch.jpg">
+                                <p class= "descript"></p>
+                                <button>Join Group</button>
+                            </div>
+                            <div class = "group">
+                                <h2>Test Group #6</h2>
+                                <img src = "eventPics/tennis.png"> 
+                                <p class= "descript"></p>  
+                                <button>Join Group</button>      
+                            </div>
+                            <div class = "group">
+                                <h2>Test Group #8</h2>
+                                <img src = "eventPics/edisonParade.jpg"> 
+                                <p class= "descript"></p>  
+                                <button>Join Group</button>  
+                            </div>
+                            <div class = "group">
+                                <h2>Test Group #9</h2>
+                                <img src = "eventPics/polarBear.jpg">
+                                <p class= "descript"></p>
+                                <button>Join Group</button>
+                            </div>
+                        </div>
+                </div>
+                <div class="columnContent" id = "invites">
+                    <h3>Invites</h3>
+                  
+                    
+                    <div class ="eventrow"> 
+                        <div class ="side">
+                            <button id="moreButton" type ="button" onclick="showGroups()">Show More</button> 
+                            <ol class = "listStyle" id = "inviteList">
+                                <li id="4" class = "inviteLI" onclick="displayInvite(this)"><p>Test Group #5<p></li>
+                            </ol>
+                        </div>
+                
+                        <div class = "main">
+                            <div>
+                                <h2 id = "inviteDisplay"></h2>
+                                <p id="inviteDescription"></p>
+                                <button id = "acceptInvite" onclick="acceptInvite()">Accept</button>
+                                <button id = "declineInvite" onclick="deleteInvite()">Decline</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columnContent" id = "createGroup">
+                    <h3>Create Group</h3>
+                    <p>Create Groups is not included in this prototype</p>
+                </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="navContent" id="homePage">
+
+            <div class = "header">
+                <h1>Home</h1>
+                <div class="header-btn">
+                    <button class = "tab" onclick="openTab(event, 'invites'); mainNav(event, 'groupsPage'); activate('invites')"></button>
+                    <button class="nav" onclick="mainNav(event, 'profilePage')"></button>
+                </div>
+            </div>
+    
+                <div class = "globalNav">
+                        <div class = "globalNav">
+                                <div class = "buttonDiv"></div>
+                                <div class = "buttonDiv">
+                                    <button class = "nav" onclick="mainNav(event, 'groupsPage')">
+                                        Groups
+                                    </button>
+                                </div>
+                                <div class = "buttonDiv">
+                                    <button class = "nav active" onclick="mainNav(event, 'homePage')">
+                                        Home
+                                    </button>
+                                </div>
+                                <div class = "buttonDiv">
+                                    <button class = "nav" onclick="mainNav(event, 'eventsPage')">
+                                        Events
+                                    </button>
+                                </div>
+                                <div class="buttonDiv"></div>
+                                </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="column" id = "mainGroups">
+                            <h2>Your Groups</h2>
+                        </div>
+                        <div class="column" id = "you">
+                            <h2>You</h2>
+                        </div>
+                        <div class="column" id = "goingTo">
+                            <h2>Going To</h2>
+                        </div>
+                    </div>
+    
+        </div>
+
+
+
+
+
+
+
+
+        <div class="navContent" id="eventsPage">
+
+                <div class = "header">
+                    <h1>Events</h1>
+                    <div class="header-btn">
+                        <button class = "tab" onclick="openTab(event, 'invites'); mainNav(event, 'groupsPage');"></button>
+                        <button class="nav" onclick="mainNav(event, 'profilePage')"></button>
+                        </div>
+                </div>
+        
+                    <div class = "globalNav">
+                            <div class = "globalNav">
+                                    <div class = "buttonDiv"></div>
+                                    <div class = "buttonDiv">
+                                        <button class = "nav" onclick="mainNav(event, 'groupsPage')">
+                                            Groups
+                                        </button>
+                                    </div>
+                                    <div class = "buttonDiv">
+                                        <button class = "nav" onclick="mainNav(event, 'homePage')">
+                                            Home
+                                        </button>
+                                    </div>
+                                    <div class = "buttonDiv">
+                                        <button class = "nav active" onclick="mainNav(event, 'eventsPage')">
+                                            Events
+                                        </button>
+                                    </div>
+                                    <div class="buttonDiv"></div>
+                                    </div>
+                        </div>
+        
+                        <div class ="eventrow"> 
+                            <div class ="side">
+                                <input type="text" id="myInput" onkeyup="selectEvent()" placeholder="Search for an Event.." title="Type in a name">
+                                <button id="moreButton" type ="button" onclick="showEvents()">Show More</button> 
+                                <ol id = "orderedList"></ol>
+                            </div>
+                    
+                            <div class = "main">
+                                <div>
+                                    <h2 id = "newDisplay"></h2>
+                                    <p id="eventDescription"></p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class = "eventInformation">
+                                <div class = "event">
+                                    <h2 id = "EventTitle">Apple Picking W/ Jerry</h2>
+                                    <img src = "eventPics/applePicking.jpg" alt="apples"> 
+                                    <p class= "descript">Do you like Sunday's and do you like Apples? Well looks like I've got
+                                        the thing for you! Come down to my farm to pick some sweet red apples. They're the best around!
+                                        No cost at all! (I've got waaay too many).
+                                    </p>
+                                </div>
+                                <div class = "event">
+                                    <h2>Eel Swallowing at the Zoo</h2>
+                                    <img src = "eventPics/eelSwallowing.png" alt="eel">
+                                    <p class= "descript"></p>
+                                </div>
+                                <div class = "event">
+                                    <h2>Dungeons & Dragons</h2>
+                                    <img src ="eventPics/dungeonsAndDragons.jpg" alt="paper and dice"> 
+                                    <p class= "descript"></p>
+                                </div>
+                                <div class = "event">
+                                    <h2>Star Wars Connoisseurs</h2>
+                                    <img src = "eventPics/starwars.png">
+                                    <p class= "descript"></p>
+                                </div>
+                                <div class = "event">
+                                    <h2>Having More Fun with Scotch</h2>
+                                    <img src = "eventPics/scotch.jpg">
+                                    <p class= "descript"></p>
+                                </div>
+                                <div class = "event">
+                                    <h2>Cheese Wars Canada: Wine vs. Beer</h2>
+                                    <img src = "eventPics/cheeseWars.jpg">
+                                    <p class= "descript"></p>
+                                </div>
+                                <div class = "event">
+                                    <h2>Wines of Italy</h2>
+                                    <img src = "eventPics/wineOfItaly.jpg">
+                                    <p class= "descript"></p>
+                                </div>
+                                <div class = "event">
+                                    <h2>True Crime Book Club (40+)</h2>
+                                    <img src = "eventPics/trueCrime.jpg">
+                                    <p class= "descript"></p>
+                                </div>
+                                <div class = "event">
+                                    <h2>Blueberry Jam Sessions</h2>
+                                    <img src = "eventPics/jamSession.jpg">
+                                    <p class= "descript"></p>
+                                </div>
+                                <div class = "event">
+                                    <h2>Household Yoga</h2>
+                                    <img src = "eventPics/yoga.jpg">
+                                    <p class= "descript"></p>
+                                </div>
+                                <div class = "event">
+                                    <h2>Good Boy Meetup in St. Vital Park</h2>
+                                    <img src = "eventPics/dogMeetup.jpg"> 
+                                    <p class= "descript"></p>          
+                                </div>
+                                <div class = "event">
+                                    <h2>Kombucha 101</h2>
+                                    <img src = "eventPics/kombucha.jpg">
+                                    <p class= "descript"></p>            
+                                </div>
+                                <div class = "event">
+                                    <h2>The Park Theatre Presents: Cars the Musical</h2>
+                                    <img src = "eventPics/carsMusical.jpg"> 
+                                    <p class= "descript"></p>          
+                                </div>
+                                <div class = "event">
+                                    <h2>Tennis?</h2>
+                                    <img src = "eventPics/tennis.png"> 
+                                    <p class= "descript"></p>        
+                                </div>
+                                <div class = "event">
+                                    <h2>General Electric's 50th Annual Thomas Edison Parade</h2>
+                                    <img src = "eventPics/edisonParade.jpg"> 
+                                    <p class= "descript"></p>    
+                                </div>
+                                <div class = "event">
+                                    <h2>The Gimli Polar Bear Dive</h2>
+                                    <img src = "eventPics/polarBear.jpg">
+                                    <p class= "descript"></p>
+                                </div>
+                                <div class = "event">
+                                    <h2>Dan Mangan's More or Less Tour</h2>
+                                    <img src = "eventPics/danMangan.jpg"> 
+                                    <p class= "descript"></p>        
+                                </div>
+                                <div class = "event">
+                                    <h2>Glassblowing in the Park</h2>
+                                    <img src = "eventPics/glassBlowing.jpg">
+                                    <p class= "descript"></p>       
+                                </div>
+                                <div class = "event">
+                                    <h2>BYOP(erogies) Ukranian Meet and Greet</h2>
+                                    <img src = "eventPics/perogy.jpg">
+                                    <p class= "descript"></p>       
+                                </div>
+                                <div class = "event">
+                                    <h2>Anton's Craft Cocktail Extravaganza</h2>
+                                    <img src = "eventPics/antonCocktail.jpg">
+                                    <p class= "descript"></p>   
+                                </div>
+                                <div class = "event">
+                                    <h2>Anime by the Beach: A Justin Band Experience</h2>
+                                    <img src = "eventPics/anime.jpg"> 
+                                    <p class= "descript"></p>      
+                                </div>
+                                <div class = "event">
+                                    <h2>Thai's Thai Cooking Class</h2>
+                                    <img src = "eventPics/thaiFood.jpg">   
+                                    <p class= "descript"></p>    
+                                </div>
+                                <div class = "event">
+                                    <h2>Vinegar Fermenting</h2>
+                                    <img src = "eventPics/vinegar.jpg">
+                                    <p class= "descript"></p>       
+                                </div>
+                                <div class = "event">
+                                    <h2>Dave's 32nd Birthday Party</h2>
+                                    <img src = "eventPics/daveBirthday.jpg"> 
+                                    <p class= "descript"></p>   
+                                </div>
+                                <div class = "event">
+                                    <h2>Kite Flying @ St.Vital Park</h2>
+                                    <img src = "eventPics/kite.jpg">
+                                    <p class= "descript"></p>       
+                                </div>
+                                <div class = "event">
+                                    <h2>Basic Woodworking and Carpentry with Doug Joe Brown</h2>
+                                    <img src = "eventPics/carpentry.jpg">    
+                                    <p class= "descript"></p>  
+                                </div>
+                                <div class = "event">
+                                    <h2>Dan "The Snake" Phillips Presents: Hotwiring and Lockpicking</h2>
+                                    <img src = "eventPics/lockpicking.jpg">  
+                                    <p class= "descript"></p>    
+                                </div>
+                                <div class = "event">
+                                    <h2>Lecture: The History of Playground in Winnipeg</h2>
+                                    <img src = "eventPics/playground.png">  
+                                    <p class= "descript"></p>
+                                </div>
+                                <div class = "event">
+                                    <h2>How to Avoid Procrastination w/ Evan (Postponed until further notice)</h2>
+                                    <img src = "eventPics/clock.jpg">     <p class= "descript"></p>    
+                                </div>
+                            </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="navContent" id="profilePage">
+
+                <div class = "header">
+                    <h1>You</h1>
+                    <div class="header-btn">
+                        <button class = "nav" onclick="openTab(event, 'invites'); mainNav(event, 'groupsPage');"></button>
+                        <button class="nav" onclick="mainNav(event, 'profilePage')"></button>
+                        </div>
+                </div>
+        
+                    <div class = "globalNav">
+                            <div class = "globalNav">
+                                    <div class = "buttonDiv"></div>
+                                    <div class = "buttonDiv">
+                                        <button class = "nav" onclick="mainNav(event, 'groupsPage')">
+                                            Groups
+                                        </button>
+                                    </div>
+                                    <div class = "buttonDiv">
+                                        <button class = "nav" onclick="mainNav(event, 'homePage')">
+                                            Home
+                                        </button>
+                                    </div>
+                                    <div class = "buttonDiv">
+                                        <button class = "nav" onclick="mainNav(event, 'eventsPage')">
+                                            Events
+                                        </button>
+                                    </div>
+                                         <div class="buttonDiv"></div>
+                             </div>
+                </div>
+
+    <div class ="row">
+
+		<div class="profileColumn topLeft">
+			<h2 class="profileHeader">YOUR INFO</h2>
+			<p class="yourInfo">
+				<b>Name:</b> Duane Thetub<br/><br/>
+				<b>Location:</b> Winnipeg, Manitoba (R2M 1V6)<br/><br/>
+				<b>Age:</b> Old Enough<br/><br/>
+			</p>
+			<hr>
+		</div>
+
+    	<div class = "profileColumn bigRight">
+                <h2 class="profileHeader">ADD INTERESTS</h2>
+                   	<input  id="myInput" type="text" onkeyup="selectInt()" placeholder="Search for more..." title="Type in an interest">
+            	<ol id = "otherIntList"></ol>
+            	<button id="addButton" type="button" onclick="addSelected()">Add</button>
+            	<button id="moreButton" class="seeMore" type ="button" onclick="showInt()">See more...</button>
+        </div>
+
+    	<div class ="profileColumn bottomLeft">
+    		<h2 class="profileHeader">YOUR INTERESTS</h2>
+            <input  id="myInput" type="text" onkeyup="selectInt()" placeholder="Search your interests..." title="Type in an interest">
+            <ol id = "yourIntList"></ol>
+            <button id="moreButton" type ="button" class="seeMore" onclick="showInt()">See more...</button>
+        </div>
+
+	</div>
+
+
+
+
+
+	<div class="interestInformation">
+		<label class="interest">
+			<h6 class="interestTitle">Soccer </h2>
+		</label>
+		<div class="interest">
+			<h6 class="interestTitle">Fishing  </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Ink Brewing </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Computer Repair  </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Programming </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Video Games </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Tennis </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Fine Dining </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Dogs </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Mixed Martial Arts </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Country Music </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Basket Weaving </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Partying </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Aqua Fitness </h2>
+		</div>
+		<div class="interest">
+			<h6 class="interestTitle">Cross Country </h2>
+		</div>
+    </div>
+                
+        
+    </div>
+
+
+
+    
+    <script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("columnContent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tab");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+
+
+function mainNav(evt, tabName) {
+    var i, tabcontent, tablinks, pageData;
+    tabcontent = document.getElementsByClassName("navContent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("nav");
+   
+    document.getElementById(tabName).style.display = "block";
+
+    pageData = document.getElementsByClassName(tabName);
+    for (i =0; i < pageData.length; i++) {
+        pageData[i].style.display = "block";
+            }
+        
+}
+
+function start(){
+    profileStart();
+    eventStart();
+}
+</script>
+</body>
+
+
+
+</html>

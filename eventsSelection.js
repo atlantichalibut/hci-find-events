@@ -35,6 +35,7 @@ function createEvents(){
         allEvents.push(newEvent);
 
         $("#orderedList").append('<li id="'+i+'"onclick="displayEvent(this)"><p>'+newEvent.title+'<p></li>');
+
             //Add a new list item (with id corresponding to an array of images) and have a sub-p with the title 
     }
 }
@@ -64,7 +65,7 @@ function showEvents(){
     $(this).html('Show Less'); // Flip the More/Less sign
 }
 
-function start(){
+function eventStart(){
     createEvents();
     hideEvents(); 
 }
@@ -75,4 +76,10 @@ function Event(title, img, description, pos) {
     this.description = description;
     this.arrPos = pos;
 }
+
+
+
+
+
+
 
