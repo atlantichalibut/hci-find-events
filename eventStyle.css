@@ -2,6 +2,20 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #9099A2;
+}
+
+nav ul {
+    height:400px; 
+    width:100%;
+}
+
+nav ul {
+    overflow:hidden; 
+    overflow-y:scroll;
+}
+
 
 .header {
     padding: 10px;
@@ -22,6 +36,7 @@
 
 .side {
     flex: 40%;
+    height: 100%;
     background-color: #6D7993;
     padding: 20px;
 }
@@ -33,10 +48,30 @@
     text-align: center;
 }
 
+.mainImg {
+    flex: 25%;
+    bottom: 0;
+}
+
+.mainSupplemental {
+    flex: 75%;
+    position: relative;
+}
+
+.suppInfo {
+    text-align: right;
+    padding-left: 25%;
+}
+
+.suppRegister {
+}
+
 .eventImg {
     float: left;
+    bottom: 0;
     width: 25%;
-    height: 50%;
+    height: 100%;
+    display: none;
 }
 
 .descript {
@@ -49,15 +84,12 @@
     background-color: lightgreen;
 }
 
-#newDisplay {
-    /* background-color: lightcoral; */
-}
 
 #orderedList {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+
 }
 
 #orderedList li {
@@ -89,8 +121,25 @@ input[type=text] {
     text-align: left;
 }
 
-#moreButton {
-    width: 30%;
+img {
+    position: relative;
+    float: left;
+    width:  100px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+#newDisplay {
+    font-family: "Arial Black", Gadget, sans-serif;
+    /* box-shadow: 0 0 1em 1em #ccc; */
+}
+
+/* ---------- BUTTONS --------- */
+
+#registerButton {
+    width: 10%;
     padding: 12px 5px;
     margin: 8px 0;
     display: inline-block;
@@ -98,7 +147,9 @@ input[type=text] {
     border: none;
 }
 
-#moreButton:hover {
+#registerButton:hover{
     background-color: antiquewhite;
 }
+
+
 
