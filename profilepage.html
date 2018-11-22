@@ -9,6 +9,7 @@
 	</script>
 </head>
 
+<!-This call reads in all interests from the class "interestInformation"->
 <body onload = "start();">
 
 	<div class = "header">
@@ -27,75 +28,81 @@
 				<b>Location:</b> Winnipeg, Manitoba (R2M 1V6)<br/><br/>
 				<b>Age:</b> Old Enough<br/><br/>
 			</p>
-			<hr>
 		</div>
 
     	<div class = "column bigRight">
                 <h2>ADD INTERESTS</h2>
-                   	<input  id="myInput" type="text" onkeyup="selectInt()" placeholder="Search for more..." title="Type in an interest">
+                   	<input  id="otherInput" type="text" onkeyup="searchInt('otherIntList', 'otherInput')" placeholder="Search for more..." title="Type in an interest">
             	<ol id = "otherIntList"></ol>
-            	<button id="addButton" type="button" onclick="addSelected()">Add</button>
-            	<button id="moreButton" class="seeMore" type ="button" onclick="showInt()">See more...</button>
+            	<button id="addButton" type="button" onclick="addSelected()">ADD</button>
         </div>
 
     	<div class ="column bottomLeft">
     		<h2>YOUR INTERESTS</h2>
-            <input  id="myInput" type="text" onkeyup="selectInt()" placeholder="Search your interests..." title="Type in an interest">
+            <input  id="yourInput" type="text" onkeyup="searchInt('yourIntList', 'yourInput')" placeholder="Search your interests..." title="Type in an interest">
             <ol id = "yourIntList"></ol>
-            <button id="moreButton" type ="button" class="seeMore" onclick="showInt()">See more...</button>
         </div>
 
 	</div>
 
-
-
-
+	<div id="colorDummy" style="display:none;"></div>	<!- This is used in the js file to compare colour values->
 
 	<div class="interestInformation">
-		<label class="interest">
+		<div class="interest">
 			<h2 id="title">Soccer </h2>
-		</label>
+			<img src = "intPics/soccer.png">
+		</div>
 		<div class="interest">
 			<h2 id="title">Fishing  </h2>
+			<img src = "intPics/fishing.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Ink Brewing </h2>
+			<img src = "intPics/ink.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Computer Repair  </h2>
-		</div>
-		<div class="interest">
-			<h2 id="title">Programming </h2>
+			<img src = "intPics/computer.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Video Games </h2>
+			<img src = "intPics/vids.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Tennis </h2>
+			<img src = "intPics/tennis.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Fine Dining </h2>
+			<img src = "intPics/dining.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Dogs </h2>
+			<img src = "intPics/dog.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Mixed Martial Arts </h2>
+			<img src = "intPics/boxing.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Country Music </h2>
+			<img src = "intPics/country.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Basket Weaving </h2>
+			<img src = "intPics/basket.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Partying </h2>
+			<img src = "intPics/party.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Aqua Fitness </h2>
+			<img src = "intPics/aqua.png">
 		</div>
 		<div class="interest">
 			<h2 id="title">Cross Country </h2>
+			<img src = "intPics/running.png">
 		</div>
 	</div>
 </body>
