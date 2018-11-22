@@ -20,6 +20,26 @@ function selectEvent(){
     }
 }
 
+function registerEvent(){
+    var currEvent;
+    
+    for(var i = 0; i < allEvents.length; i++){
+        currEvent = allEvents[i];
+
+        if(currEvent.selected) { // if it's selected and not already registered
+            if(!currEvent.registered){
+                currEvent.registered = true; // register for the event
+                changeRegButton(currEvent);
+            } else {
+                currEvent.registered = false; // register for the event
+                changeRegButton(currEvent);
+            }
+        }
+    }
+}
+
+
+
 /*
     Create Event objects based on given HTML
 */
@@ -59,6 +79,29 @@ function displayEvent($this){
     $("#eventDescription").html('<p class="descript">'+descript+'</p>');
     $("#eventDate").html(date);
     $("#eventLocation").html(loc);
+
+    document.getElementById(idPos).style.backgroundColor = "antiquewhite";	//colour the interest back to "unselected"
+    currEvent.selected = true;
+
+    for(var i = 0; i < allEvents.length; i++){
+        if(i != idPos){ //change the color of a list item after a press
+            document.getElementById(i).style.backgroundColor = "lightblue";
+            changeEvent = allEvents[i];
+            changeEvent.selected = false;
+        }
+    }
+
+    changeRegButton(currEvent);
+}
+
+function changeRegButton(event) {
+    if(event.selected && event.registered){
+        $("#registerButton").html("REGISTERED");
+        $("#registerButton").css("background-color", "red");
+    } else {
+        $("#registerButton").html("REGISTER");
+        $("#registerButton").css("background-color", "green");
+    }
 }
 
 function start(){
@@ -72,5 +115,7 @@ function Event(title, img, description, pos, date, location) {
     this.arrPos = pos;
     this.date = date;
     this.location = location;
+    this.selected = false;
+    this.registered = false;
 }
 
