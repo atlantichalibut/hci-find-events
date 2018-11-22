@@ -27,7 +27,8 @@
     float: left;
     width: 33.33%;
     padding: 10px;
-    height: 200px;
+    height: 100px;
+    font-size: 25px;
     text-align: center;
 }
 
