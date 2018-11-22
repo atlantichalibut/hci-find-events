@@ -10,11 +10,24 @@ h2 {
     background-color: #063852;
     text-align: center;
     height: 30px;
+    border-radius: 5px;
 }
 
 hr {
 	color: #063852;
 }
+
+ol li{
+    font-size: 25px;
+}
+
+input[type=text] {
+    border: 2px solid #404040;
+    border-radius: 4px;
+    color: black;
+    height: 20px;
+}
+
 
 /************** CLASSES ************/
 
@@ -22,7 +35,7 @@ hr {
     float: left;
     text-align: left;
     padding: 10px;
-    width: 35%;
+    width: 40%;
     color: #F0810F;
     background-color: #011A27;
 }
@@ -34,11 +47,12 @@ hr {
 }
 
 .topLeft {
-	height: 20%;
+	height: 15%;
 }
 
 .bottomLeft {
-	height: 60%;
+	height: 80%;
+    float: left;
 }
 
 .row:after {
@@ -82,38 +96,75 @@ p.yourInfo {
     border: none;
 }
 
+.interestInformation {
+    display: none;
+}
+
+.interestImg {
+    float: left;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.redX {
+    float: right;
+
+    width: 48px;
+    height: 64px;
+    margin-right: 20px;
+    margin-top: -20px;
+    cursor: pointer; 
+    transform: rotate(270deg);
+    display: inline-block;
+}
+
+/*************** ID's **************/
+
 #otherIntList {
     list-style-type: none;
     padding: 2px;
-    margin: 0;
+    height: 540px;
+
+
+    overflow:hidden; 
+    overflow-y:scroll;
 }
 
 #otherIntList li {
     display: inline-block;
-    width: 29%;
-    border: 1px double #404040;
+    width: 40%;
+    border: 1px solid #404040;
+    border-radius: 5px;
     padding: 15px;
+    margin: 5px;
 
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    overflow: hidden;
 }
 
 #yourIntList {
     list-style-type: none;
     padding: 2px;
     margin: 0;
+    height: 340px;
+
+    overflow:hidden; 
+    overflow-y:scroll;
 }
 
 #yourIntList li {
     display: block;
-    border: 1px double #404040;
+    border: 1px solid #404040;
+    border-radius: 5px;
     padding: 15px;
+    margin: 5px;
 
-    cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -121,22 +172,38 @@ p.yourInfo {
     overflow: hidden;
 }
 
+#yourIntList:hover + #redX {
+    display: inline-block;
+}
+
 #addButton {
     width: 120px;
-    margin-left: 42.5%;
+    margin-left: 40%;
     font-size: 200%;
-    text-decoration: underline;
+
     border: 2px solid #404040;
+    border-radius: 20px;
     color: #8e4600;
     background-color: #011A27;
 }
 
-#addButton:hover {
+#otherInput #yourInput{
+    margin: 10px;
+    color: #9E90A2;
 
 }
 
-.interestInformation {
-    display: none;
+
+
+/************ Stuff for the scroll bars *********/
+
+::-webkit-scrollbar {
+    background-color: #063852;
+    border-radius: 5px;
 }
 
-
+::-webkit-scrollbar-thumb {
+    background-color: #9E90A2;
+    outline: 1px solid slategrey;
+    border-radius: 5px;
+}
