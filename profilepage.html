@@ -4,57 +4,107 @@
 <head>
 	<title>EF: You</title>
 	<link rel="stylesheet" type="text/css" href="profilepage.css">
+	<script src="profilepage.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+	</script>
 </head>
 
-<body>
+<!-This call reads in all interests from the class "interestInformation"->
+<body onload = "start();">
 
-	<h1> YOU </h1>
+	<div class = "header">
+		<h1> YOUR PROFILE </h1>
+		<button>GROUPS</button>
+		<button onclick="window.location.href='main.html'">HOME</button>
+		<button onclick="window.location.href='events.html'">EVENTS</button>
+	</div>
 
-	<div class="row";>
-		<div class="column topLeft";>
+	<div class ="row">
+
+		<div class="column topLeft">
 			<h2>YOUR INFO</h2>
-			<p class="yourInfo";>
-				Name: Duane Thetub<br/>
-				Location: Winnipeg, Manitoba (R2M 1V6)<br/>
-				Age: Old Enough<br/>
-
-			</p>  
-			<hr width="110%";>
-		</div>	
-
-		<div class="column right";>
-			<h2>BROWSE INTERESTS</h2>
-
-			<ul class="yourInterests";>
-				<li>Basket Weaving</li>
-	  			<li>Soccer</li>
-	 			<li>Birthday Parties</li>
-	  			<li>Fly Taming</li>
-	  			<li>Meme Frying</li>
-	  			<li>Reddit</li>
-	  			<li>Netflix</li>
-	  			<li>Cards</li>
-	  		</ul>
-
-			<p class="seeMore";> See more...</p>
+			<p class="yourInfo">
+				<b>Name:</b> Duane Thetub<br/><br/>
+				<b>Location:</b> Winnipeg, Manitoba (R2M 1V6)<br/><br/>
+				<b>Age:</b> Old Enough<br/><br/>
+			</p>
 		</div>
 
-		<div class="column bottomLeft";>
-			<h2> YOUR INTERESTS </h2>
-			<ul>
-				<li>Soccer Game</li>
-	 			<li>Fishing</li>
-	  			<li>Ink Brewing</li>
-	  			<li>Fixing Computers</li>
-	  			<li>Programming</li>
-	  			<li>Video Games</li>
-			</ul>
-			<p class="seeMore";> See more...</p>
-		</div>
+    	<div class = "column bigRight">
+                <h2>ADD INTERESTS</h2>
+                   	<input  id="otherInput" type="text" onkeyup="searchInt('otherIntList', 'otherInput')" placeholder="Search for more..." title="Type in an interest">
+            	<ol id = "otherIntList"></ol>
+            	<button id="addButton" type="button" onclick="addSelected()">ADD</button>
+        </div>
 
+    	<div class ="column bottomLeft">
+    		<h2>YOUR INTERESTS</h2>
+            <input  id="yourInput" type="text" onkeyup="searchInt('yourIntList', 'yourInput')" placeholder="Search your interests..." title="Type in an interest">
+            <ol id = "yourIntList"></ol>
+        </div>
 
 	</div>
 
+	<div id="colorDummy" style="display:none;"></div>	<!- This is used in the js file to compare colour values->
+
+	<div class="interestInformation">
+		<div class="interest">
+			<h2 id="title">Soccer </h2>
+			<img src = "intPics/soccer.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Fishing  </h2>
+			<img src = "intPics/fishing.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Ink Brewing </h2>
+			<img src = "intPics/ink.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Computer Repair  </h2>
+			<img src = "intPics/computer.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Video Games </h2>
+			<img src = "intPics/vids.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Tennis </h2>
+			<img src = "intPics/tennis.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Fine Dining </h2>
+			<img src = "intPics/dining.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Dogs </h2>
+			<img src = "intPics/dog.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Mixed Martial Arts </h2>
+			<img src = "intPics/boxing.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Country Music </h2>
+			<img src = "intPics/country.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Basket Weaving </h2>
+			<img src = "intPics/basket.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Partying </h2>
+			<img src = "intPics/party.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Aqua Fitness </h2>
+			<img src = "intPics/aqua.png">
+		</div>
+		<div class="interest">
+			<h2 id="title">Cross Country </h2>
+			<img src = "intPics/running.png">
+		</div>
+	</div>
 </body>
 
 </html>
