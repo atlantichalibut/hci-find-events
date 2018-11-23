@@ -25,6 +25,16 @@ nav ol {
     overflow-y:scroll;
 }
 
+nav ul {
+    height:400px; 
+    width:100%;
+}
+
+nav ul {
+    overflow:hidden; 
+    overflow-y:scroll;
+}
+
 /*********** EVENTS **************/
 .eventInformation {
     display: none;
@@ -61,6 +71,10 @@ nav ol {
     display: none;
 }
 
+#interestList {
+    border: 1px solid #404040;
+}
+
 #interestsList li {
     display: block;
     border: 1px solid #404040;
@@ -79,6 +93,10 @@ nav ol {
     overflow: hidden;
 
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#interestsList li:hover {
+    cursor: pointer;
 }
 
 .interestImg {
