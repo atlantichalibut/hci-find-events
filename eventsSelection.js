@@ -34,6 +34,22 @@ function selectEvent(){
     }
 }
 
+function displayFromHome(){
+    
+    var listings = JSON.parse(sessionStorage.getItem('eventArray'));
+
+    for(var i = 0; i < listings.length; i++){
+        var currEvent = listings[i];
+
+        if(currEvent.homeAccess == true){ // MAYBE A PROBLEM??????
+            showEventFromHome(currEvent);
+            currEvent.homeAccess = false;
+            listings[i] = currEvent;
+            sessionStorage.setItem('eventArray', JSON.stringify(listings));
+        }
+    }
+}
+
 function registerEvent(){
     var currEvent;
     
@@ -53,6 +69,45 @@ function registerEvent(){
     addToSessionStorage();
 }
 
+function showEventFromHome(currEvent){
+    var postingTitle = document.getElementById("newDisplay");
+    postingTitle.innerHTML = currEvent.title;
+    
+    var image = currEvent.imageFile;
+    var descript = currEvent.description;
+    var date = currEvent.date;
+    var loc = currEvent.location;
+
+    $("#newEventImg").css("display", "inline-block");
+    $("#newEventImg").attr("src",image);
+    
+    $("#eventDescription").html('<p class="descript">'+descript+'</p>');
+    $("#eventDate").html("<b> Date: </b>"+date);
+    $("#eventLocation").html("<b>Location: </b>"+loc);
+    
+    $("#eventDate").css("border-bottom", "1px dotted black");
+    $("#eventLocation").css("border-bottom", "1px dotted black");
+
+    
+    document.getElementById(currEvent.arrPos).style.backgroundColor = "antiquewhite";	//colour the interest back to "unselected"
+    currEvent.selected = true;
+
+    var listings = JSON.parse(sessionStorage.getItem('eventArray'));
+
+    for(var i = 0; i < listings.length; i++){
+        if(i == currEvent.arrPos){ //change the color of a list item after a press
+            
+            document.getElementById(i).style.backgroundColor = "lightblue";
+            changeEvent = allEvents[i];
+            changeEvent.selected = false;
+        } else {
+            
+        }
+    }
+
+    changeRegButton(currEvent);
+}
+
 function displayEvent($this){
     var postingTitle = document.getElementById("newDisplay");
     postingTitle.innerHTML = $this.innerHTML;
@@ -67,7 +122,6 @@ function displayEvent($this){
     $("#newEventImg").css("display", "inline-block");
     $("#newEventImg").attr("src",image);
     
-    //$("#newDisplay").append("<img class='eventImg' src='"+image+"'>");
     $("#eventDescription").html('<p class="descript">'+descript+'</p>');
     $("#eventDate").html("<b> Date: </b>"+date);
     $("#eventLocation").html("<b>Location: </b>"+loc);
@@ -92,7 +146,7 @@ function displayEvent($this){
 function changeRegButton(event) {
     if(event.selected && event.registered){
         $("#registerButton").html("REGISTERED");
-        $("#registerButton").css("background-color", "#6D7993");
+        $("#registerButton").css("background-color", "lightcoral");
     } else {
         $("#registerButton").html("REGISTER");
         $("#registerButton").css("background-color", "#C7CEDB");
@@ -102,4 +156,5 @@ function changeRegButton(event) {
 
 function start(){
     addToEventList(); 
+    displayFromHome();
 }
