@@ -6,11 +6,13 @@
 
 h2 {
     color: black;
-    background: #41658A;
+    background: #6D7993;
     text-align: center;
     height: 40px;
     border-radius: 5px;
     font-size: 25px;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 nav ol {
@@ -44,6 +46,10 @@ nav ol {
 
     text-align: center;
     text-decoration: none;
+
+    margin-top: 3px;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #eventsList li:hover {
@@ -98,7 +104,7 @@ nav ol {
 }
 
 .header {
-    height: 160px;
+    height: 190px;
 }
 
 

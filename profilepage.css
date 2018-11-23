@@ -7,10 +7,13 @@ body {
 
 h2 {
     color: black;
-    background-color: #9099A2;
+    background: #6D7993;
     text-align: center;
     height: 30px;
     border-radius: 5px;
+
+    margin-top: 0px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 hr {
@@ -44,6 +47,7 @@ input[type=text] {
     width: 40%;
     color: black;
     background-color: #C7CEDB;
+    height: 100%;
 }
 
 .bigRight {
@@ -51,12 +55,12 @@ input[type=text] {
 	width: 55%;
 	height: 80%;
 
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .topLeft {
 	height: 15%;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .bottomLeft {
@@ -68,19 +72,6 @@ input[type=text] {
     content: "";
     display: table;
     clear: both;
-}
-
-.header {
-    padding: 5px;
-    background: #41658A;
-    color: black;
-
-    font-size: 30px;
-    text-align: center;
-
-    border-radius: 5px;
-
-    height: 150px;
 }
 
 .body {
@@ -131,6 +122,8 @@ p.yourInfo {
     border-radius: 5px;
 
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    margin-top: 5px;
 }
 
 .direct:hover {
@@ -138,6 +131,11 @@ p.yourInfo {
 }
 
 /*************** ID's **************/
+
+#profileButton {
+    width: 44px;
+    height: 44px;
+}
 
 #clickToAdd {
     margin: 10px;
@@ -216,16 +214,15 @@ p.yourInfo {
     background-color: #6D7993;
 }
 
+#addButton:hover {
+    cursor: pointer;
+}
+
 #otherInput #yourInput{
     margin: 10px;
     color: #9E90A2;
     border-radius: 5px;
 }
-
-#dirButtons {
-    margin-top: -45px;
-}
-
 
 #pageTitle {
     margin-top: 15px;

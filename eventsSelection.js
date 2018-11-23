@@ -48,6 +48,7 @@ function displayFromHome(){
             sessionStorage.setItem('eventArray', JSON.stringify(listings));
         }
     }
+        $("#registerButton").css('display', 'inline-block');
 }
 
 function registerEvent(){
@@ -139,7 +140,7 @@ function displayEvent($this){
             changeEvent.selected = false;
         }
     }
-
+    $("#registerButton").css('display', 'inline-block');
     changeRegButton(currEvent);
 }
 

@@ -11,7 +11,7 @@ h2 {
 /****************Classes*************/
 
 .header {
-    height: 160px;
+    height: 190px;
 }
 
 .side {
@@ -134,7 +134,6 @@ h2 {
 }
 
 #newYourDisplay, #newOtherDisplay {
-    font-family: "Arial Black", Gadget, sans-serif;
     border-radius: 5px;
 
     background-color: #6D7993;

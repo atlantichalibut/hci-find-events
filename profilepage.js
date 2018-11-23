@@ -38,7 +38,7 @@ function select($this) {
 
 		//check if that was the last selected element, if so, discolour the ADD button
 		if(Boolean(!anySelected())) {
-			document.getElementById("addButton").style.color = "#404040";			
+			document.getElementById("addButton").style.color = "#404040";
 			document.getElementById("addButton").style.backgroundColor = "#6D7993";
 			document.getElementById("addButton").style.cursor = "";
 		}
@@ -59,7 +59,7 @@ function select($this) {
 				document.getElementById("addButton").style.color = "black";
 			}
 			
-			document.getElementById(idPos).style.backgroundColor = "#063852";	//colour the interest back to "unselected"
+			document.getElementById(idPos).style.backgroundColor = "#70A9A1";	//colour the interest back to "unselected"
 		}
 	}
 }

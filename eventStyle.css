@@ -4,7 +4,11 @@
 
 body {
     background-color: #C7CEDB;
-    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+h2 {
+    height: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 nav ul {
@@ -18,16 +22,7 @@ nav ul {
 }
 
 .header {
-    padding: 5px;
-    background: #41658A;
-    color: black;
-
-    font-size: 30px;
-    text-align: center;
-
-    border-radius: 5px;
-
-    height: 160px;
+    height: 190px;
 }
 
 .eventInformation {
@@ -47,6 +42,7 @@ nav ul {
 
     border-radius: 5px;
     margin-top: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .main {
@@ -54,6 +50,8 @@ nav ul {
     background-color: #C7CEDB;
     padding: 20px;
     text-align: center;
+    padding-top: 0px;
+    margin-top: 20px;
 }
 
 .mainInfo {
@@ -105,6 +103,11 @@ nav ul {
     background-color: lightgreen;
 }
 
+.dirBut {
+    margin-left: 18px;
+    margin-bottom: 2px;
+}
+
 
 #orderedList {
     list-style-type: none;
@@ -128,6 +131,10 @@ nav ul {
 
     text-align: center;
     text-decoration: none;
+
+    margin-bottom: 3px;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #orderedList li:hover {
@@ -165,32 +172,13 @@ img {
     text-align: center;
 }
 
-.direct{
-    background-color: #9099A2;
-    border: 1px solid #2E3532;
-    color: black;
-    border-radius: 5px;
-
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.direct:hover {
-    cursor: pointer;
-}
-
-#thisDirect {
-    cursor: context-menu;
-    height: 30px;
-    background-color: #6D7993;
-}
-
 /* ---------- BUTTONS --------- */
 
 #registerButton {
     width: 15%;
     padding: 12px 12px;
     margin: 8px 0;
-    display: inline-block;
+    display: none;
     text-align: center;
 
     border: 1px solid #2E3532;
@@ -207,11 +195,6 @@ img {
 #profileButton {
     height: 64px;
     width: 64px;
-}
-
-
-#dirButtons {
-    margin-top: -45px;
 }
 
 #pageTitle {
