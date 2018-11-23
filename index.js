@@ -44,10 +44,61 @@ function addToSessionStorage(){
     }
 }
 
+/******** EVENTS *********/
+
+function displayEvents(){
+    var listings = JSON.parse(sessionStorage.getItem('eventArray'));
+
+    for(var i = 0; i < listings.length; i++){
+        var currEvent = listings[i];
+
+        if(currEvent.registered){
+            $("#eventsList").append('<li id="'+i+'" onclick="redirectToEvents('+currEvent.arrPos+')"><p>'+currEvent.title+'<p></li>');
+        }
+    }
+}
+
+function redirectToEvents(eventPos){
+    var listings = JSON.parse(sessionStorage.getItem('eventArray'));
+
+    for(var i = 0; i < listings.length; i++){
+        var currEvent = listings[i];
+        if(currEvent.arrPos == eventPos){
+            currEvent.homeAccess = true;
+        }
+    }
+
+    sessionStorage.setItem('eventArray', JSON.stringify(listings)); // store again
+    window.location.href='events.html';
+}
+
+/*********** INTERESTS ***********/
+
+function displayInterests(){
+    var listings = JSON.parse(sessionStorage.getItem('interestArray'));
+
+    for(var i = 0; i < listings.length; i++){
+        var currInterest = listings[i];
+        var newImg = currInterest.imageFile;
+
+        if(currInterest.yourInt){
+            $("#interestsList").append('<li id="'+i+'" onclick="redirectToInterests()"><img class="interestImg" src="'+newImg+'"><p>'+currInterest.title+'</p></li>');
+        }
+    }
+}
+
+function redirectToInterests(){
+    window.location.href='profilepage.html';
+}
+
+/************* STARTUP AND CLASSES *************/
 function start(){
     createEvents();
     createInterests();
     addToSessionStorage();
+
+    displayEvents();
+    displayInterests();
 }
 
 function Event(title, img, description, pos, date, location) {
@@ -59,6 +110,7 @@ function Event(title, img, description, pos, date, location) {
     this.location = location;
     this.selected = false;
     this.registered = false;
+    this.homeAccess = false;
 }
 
 //constructor for an interest
