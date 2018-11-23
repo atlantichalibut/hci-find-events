@@ -34,7 +34,7 @@ function select($this) {
 	if(currInt.selected)
 	{
 		allInterests[idPos].selected = false;
-		document.getElementById(idPos).style.backgroundColor = "#lightred";
+		document.getElementById(idPos).style.backgroundColor = "#41658A";
 
 		//check if that was the last selected element, if so, discolour the ADD button
 		if(Boolean(!anySelected())) {
@@ -141,6 +141,7 @@ function anySelected() {
 
 //starts the document
 function start() {
+
 	addToInterestList();
 	//addToSessionStorage();
 }

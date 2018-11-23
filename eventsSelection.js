@@ -145,10 +145,10 @@ function displayEvent($this){
 
 function changeRegButton(event) {
     if(event.selected && event.registered){
-        $("#registerButton").html("REGISTERED");
+        $("#registerButton").html("Cancel Registration");
         $("#registerButton").css("background-color", "lightcoral");
     } else {
-        $("#registerButton").html("REGISTER");
+        $("#registerButton").html("Register");
         $("#registerButton").css("background-color", "#C7CEDB");
     }
 }

@@ -139,6 +139,12 @@ p.yourInfo {
 
 /*************** ID's **************/
 
+#clickToAdd {
+    margin: 10px;
+    padding-left: 15%;
+    display: inline-block;
+}
+
 #otherIntList {
     list-style-type: none;
     padding: 2px;

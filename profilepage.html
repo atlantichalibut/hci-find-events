@@ -2,7 +2,7 @@
 <html lang="en-CA">
 
 <head>
-	<title>DB's Profile Page</title>
+	<title>Dan Bland's Epic Event Finder</title>
 	<link rel = "stylesheet" type = "text/css" href = "allPages.css">
 	<link rel="stylesheet" type="text/css" href="profilepage.css">
 	<script src="profilepage.js"></script>
@@ -36,14 +36,15 @@
 
     	<div class = "column bigRight">
                 <h2>ADD INTERESTS</h2>
-                   	<input  id="otherInput" type="text" onkeyup="searchInt('otherIntList', 'otherInput')" placeholder="Search for more..." title="Type in an interest">
+				<input  id="otherInput" type="text" onkeyup="searchInt('otherIntList', 'otherInput')" placeholder="Search for more..." title="Type in an interest">
+				<h3 id ="clickToAdd">Click Interest to Select</h3>
             	<ol id = "otherIntList"></ol>
             	<button id="addButton" type="button" onclick="addSelected()">ADD</button>
         </div>
 
     	<div class ="column bottomLeft">
     		<h2>YOUR INTERESTS</h2>
-            <input  id="yourInput" type="text" onkeyup="searchInt('yourIntList', 'yourInput')" placeholder="Search your interests..." title="Type in an interest">
+			<input  id="yourInput" type="text" onkeyup="searchInt('yourIntList', 'yourInput')" placeholder="Search your interests..." title="Type in an interest">
             <ol id = "yourIntList"></ol>
         </div>
 
