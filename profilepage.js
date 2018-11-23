@@ -1,21 +1,23 @@
-
 var allInterests = [];  //global interest array
 
-/*
-    Create Interests objects based on given HTML class interestsInformation
-*/
-function createInterests(){
-    var inInterests = document.getElementsByClassName("interest");
+function addToSessionStorage(){
+    sessionStorage.setItem('interestArray', JSON.stringify(allInterests));
+}
 
-    for(var i = 0; i < inInterests.length; i++){
-        var newTitle = inInterests[i].getElementsByTagName("h2")[0]; //get the h2 (title)
-        var newImg = inInterests[i].getElementsByTagName("img")[0]; //get the img 
-        
-        var newInterest = new Interest(newTitle.innerHTML, i, newImg.src);
-        allInterests.push(newInterest);
+function addToInterestList(){
+    var listings = JSON.parse(sessionStorage.getItem('interestArray'));
+    allInterests = listings;
 
-        $("#otherIntList").append('<li id="'+i+'"onclick="select(this)"><img class="interestImg" src="'+newImg.src+'"><p>'+newInterest.title+'</p></li>');
-            //Add a new list item (with id corresponding to an array of images) and have a sub-p with the title
+    for(var i = 0; i < allInterests.length; i++){
+		var newInterest = allInterests[i];
+		var newImg = newInterest.imageFile;
+
+		if(!newInterest.yourInt){
+			$("#otherIntList").append('<li id="'+i+'"onclick="select(this)"><img class="interestImg" src="'+newImg+'"><p>'+newInterest.title+'</p></li>');
+		} else {
+			$("#yourIntList").append('<li id="'+i+'"><img class="interestImg" src="'+newImg+'"><p>'+newInterest.title+'<img class="redX" src="intPics/redX.png" onclick="remove('+i+')"</p></li>');
+		}
+		
     }
 }
 
@@ -24,7 +26,6 @@ function createInterests(){
 // This funnction is called whenever an interest in the "otherIntList" is clicked
 // Basically toggles the colouring and "selected" value of the interest
 //also toggles the colouring of the "ADD" button based if there are still "selected" interests
-
 // $this is the interest we are toggling
 function select($this) {
 	var idPos = $this.id;
@@ -33,12 +34,12 @@ function select($this) {
 	if(currInt.selected)
 	{
 		allInterests[idPos].selected = false;
-		document.getElementById(idPos).style.backgroundColor = "#011A27";
+		document.getElementById(idPos).style.backgroundColor = "#41658A";
 
 		//check if that was the last selected element, if so, discolour the ADD button
 		if(Boolean(!anySelected())) {
-			document.getElementById("addButton").style.color = "#8e4600";
-			document.getElementById("addButton").style.backgroundColor = "#011A27";
+			document.getElementById("addButton").style.color = "#404040";			
+			document.getElementById("addButton").style.backgroundColor = "#6D7993";
 			document.getElementById("addButton").style.cursor = "";
 		}
 	}
@@ -48,14 +49,14 @@ function select($this) {
 
 			allInterests[idPos].selected = true;
 
-			$("#colorDummy").css('color', "#8e4600");	//colorDummy is used to compare colors
+			$("#colorDummy").css('background-color', "#6D7993");	//colorDummy is used to compare colors
 
 			//check is ADD button already coloured, colour if not
-			if($("#addButton").css('color') == $("#colorDummy").css('color'))
+			if($("#addButton").css('background-color') == $("#colorDummy").css('background-color'))
 			{
-				document.getElementById("addButton").style.color = "#F0810F";
-				document.getElementById("addButton").style.backgroundColor = "#063852";
+				document.getElementById("addButton").style.backgroundColor = "#41658A";
 				document.getElementById("addButton").style.cursor = "pointer";
+				document.getElementById("addButton").style.color = "black";
 			}
 			
 			document.getElementById(idPos).style.backgroundColor = "#063852";	//colour the interest back to "unselected"
@@ -101,9 +102,9 @@ function addSelected() {
 			}
 		}
 	}
-	document.getElementById("addButton").style.color = "#8e4600";
-	document.getElementById("addButton").style.backgroundColor = "#011A27";
+	document.getElementById("addButton").style.backgroundColor = "#6D7993";
 	document.getElementById("addButton").style.cursor = "";
+	addToSessionStorage();
 }
 
 
@@ -118,7 +119,8 @@ function remove(rmId) {
 
 	$("#otherIntList").append('<li id="'+rmId+'" onclick="select(this)"><img class="interestImg" src="'+allInterests[rmId].imageFile+'"><p>'+allInterests[rmId].title+'</p></li>');
 
-	document.getElementById(rmId).style.backgroundColor = "#011A27";
+	document.getElementById(rmId).style.backgroundColor = "#41658A";
+	addToSessionStorage();
 }
 
 
@@ -139,15 +141,6 @@ function anySelected() {
 
 //starts the document
 function start() {
-	createInterests();
-}
-
-
-//constructor for an interest
-function Interest(title, pos, img) {
-    this.title = title;
-    this.imageFile = img;
-    this.arrPos = pos;
-    this.selected = false;
-    this.yourInt = false;
+	addToInterestList();
+	//addToSessionStorage();
 }

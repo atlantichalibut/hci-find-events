@@ -1,6 +1,20 @@
 
 var allEvents = []; //global event array
 
+function addToSessionStorage(){
+    sessionStorage.setItem('eventArray', JSON.stringify(allEvents));
+}
+
+function addToEventList(){
+    var listings = JSON.parse(sessionStorage.getItem('eventArray'));
+    allEvents = listings;
+
+    for(var i = 0; i < allEvents.length; i++){
+        var newEvent = allEvents[i];
+        $("#orderedList").append('<li id="'+i+'"onclick="displayEvent(this)"><p>'+newEvent.title+'<p></li>');
+    }
+}
+
 function selectEvent(){
     var input, filter, ol, li, a;
     input = document.getElementById("myInput");
@@ -36,29 +50,7 @@ function registerEvent(){
             }
         }
     }
-}
-
-
-
-/*
-    Create Event objects based on given HTML
-*/
-function createEvents(){
-    var inEvents = document.getElementsByClassName("event");
-
-    for(var i = 0; i < inEvents.length; i++){
-        var newTitle = inEvents[i].getElementsByTagName("h2")[0]; //get the h2 (title)
-        var newImg = inEvents[i].getElementsByTagName("img")[0]; //get the img 
-        var newDesc = inEvents[i].getElementsByTagName("p")[0];
-        var newDate = inEvents[i].getElementsByTagName("p")[1];
-        var newLoc = inEvents[i].getElementsByTagName("p")[2];
-        
-        var newEvent = new Event(newTitle.innerHTML, newImg.src, newDesc.innerHTML, i, newDate.innerHTML, newLoc.innerHTML);
-        allEvents.push(newEvent);
-
-        $("#orderedList").append('<li id="'+i+'"onclick="displayEvent(this)"><p>'+newEvent.title+'<p></li>');
-            //Add a new list item (with id corresponding to an array of images) and have a sub-p with the title 
-    }
+    addToSessionStorage();
 }
 
 function displayEvent($this){
@@ -77,8 +69,11 @@ function displayEvent($this){
     
     //$("#newDisplay").append("<img class='eventImg' src='"+image+"'>");
     $("#eventDescription").html('<p class="descript">'+descript+'</p>');
-    $("#eventDate").html(date);
-    $("#eventLocation").html(loc);
+    $("#eventDate").html("<b> Date: </b>"+date);
+    $("#eventLocation").html("<b>Location: </b>"+loc);
+
+    $("#eventDate").css("border-bottom", "1px dotted black");
+    $("#eventLocation").css("border-bottom", "1px dotted black");
 
     document.getElementById(idPos).style.backgroundColor = "antiquewhite";	//colour the interest back to "unselected"
     currEvent.selected = true;
@@ -97,25 +92,14 @@ function displayEvent($this){
 function changeRegButton(event) {
     if(event.selected && event.registered){
         $("#registerButton").html("REGISTERED");
-        $("#registerButton").css("background-color", "red");
+        $("#registerButton").css("background-color", "#6D7993");
     } else {
         $("#registerButton").html("REGISTER");
-        $("#registerButton").css("background-color", "green");
+        $("#registerButton").css("background-color", "#C7CEDB");
     }
 }
 
+
 function start(){
-    createEvents();
+    addToEventList(); 
 }
-
-function Event(title, img, description, pos, date, location) {
-    this.title = title;
-    this.imageFile = img;
-    this.description = description;
-    this.arrPos = pos;
-    this.date = date;
-    this.location = location;
-    this.selected = false;
-    this.registered = false;
-}
-
