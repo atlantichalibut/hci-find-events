@@ -12,6 +12,10 @@ function createEvents(){
         var newLoc = inEvents[i].getElementsByTagName("p")[2];
         
         var newEvent = new Event(newTitle.innerHTML, newImg.src, newDesc.innerHTML, i, newDate.innerHTML, newLoc.innerHTML);
+
+        if(i%9 == 0){
+            newEvent.registered = true;
+        }
         allEvents.push(newEvent);        
     }
 }
@@ -27,8 +31,11 @@ function createInterests(){
         var newImg = inInterests[i].getElementsByTagName("img")[0]; //get the img 
         
         var newInterest = new Interest(newTitle.innerHTML, i, newImg.src);
+
+        if(i < 2){
+            newInterest.yourInt = true;
+        }
         allInterests.push(newInterest);
-            //Add a new list item (with id corresponding to an array of images) and have a sub-p with the title
     }
 }
 
