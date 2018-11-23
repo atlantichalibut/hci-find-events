@@ -1,0 +1,200 @@
+/*groupspage.css*/
+
+ * {
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+}
+
+/****************Classes*************/
+
+.header {
+    height: 160px;
+}
+
+.side {
+    width: 38%;
+    height: 100%;
+    padding: 20px;
+
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.groupInformation{
+    display: none;
+}
+
+.tabContent {
+    display: none;
+}
+
+.groupNav {
+    float: left;
+    width:100%;
+    padding: 10px;
+    height: 60px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.groupNav button{
+    background-color: inherit;
+    font-size: 25px;
+
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+
+    border: none;
+    border-bottom: 2px solid #404040;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.groupNav button:hover{
+    text-decoration: none;
+    background-color: #9099A2;
+    cursor: pointer;
+}
+
+.groupNav button.active{
+    border: 2px solid #404040;
+    border-bottom:none; 
+
+    background-color: #6D7993;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.groupNav button.active:hover {
+    cursor: context-menu;
+}
+
+.main {
+    float: right;
+    background-color: #C7CEDB;
+    padding: 20px;
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 30px;
+    margin-left: 5%;
+
+    border-radius: 5px;
+}
+
+.mainInfo {
+    margin-top: -10px;
+}
+
+.mainImg {
+    flex: 25%;
+    bottom: 0;
+}
+
+.groupImg {
+    float: left;
+    bottom: 0;
+    width: 25%;
+    height: 100%;
+    display: none;
+
+    border-radius: 5px;
+}
+
+.suppRegister {
+    position:relative;
+}
+
+.column {
+    float: left;
+    text-align: left;
+    padding: 10px;
+    width: 45%;
+    color: black;
+    background-color: #6D7993;
+    height: 100%
+}
+
+.row {
+    width: 100%;
+}
+
+/****************ID's*************/
+
+#browseGroups {
+    display: inline-block;
+}
+
+#groupDescription {
+    padding-left: 20px;
+}
+
+#newYourDisplay, #newOtherDisplay {
+    font-family: "Arial Black", Gadget, sans-serif;
+    border-radius: 5px;
+
+    background-color: #6D7993;
+}
+
+#otherGroupList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#otherGroupList li {
+    margin-top: -1px;
+    padding: 10px;
+    display: inline-block;
+    width: 600px;
+
+    font-size: 25px;
+    color: black;
+    background-color: lightblue;
+
+    border: 1px solid lightblue;
+    border-color: black;
+    border-radius: 5px;
+
+    text-align: center;
+    text-decoration: none;
+
+    margin-bottom: 3px;
+}
+
+#otherGroupList li:hover {
+    cursor: pointer;
+}
+
+#joinButton{
+    width: 15%;
+    padding: 12px 12px;
+    margin: 8px 0;
+    margin-left: 250px;
+    margin-top: 250px;
+    text-align: center;
+
+    border: 1px solid #2E3532;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: none;
+}
+
+#joinButton:hover{
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+input[type=text] {
+    width: 40%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    text-align: left;
+    background-color: #C7CEDB;
+}
