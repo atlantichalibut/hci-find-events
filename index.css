@@ -1,0 +1,58 @@
+/*homepage.css*/
+
+ * {
+    box-sizing: border-box;
+}
+
+h2 {
+    color: black;
+    background: #41658A;
+    text-align: center;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+/*********** EVENTS **************/
+.eventInformation {
+    display: none;
+}
+
+/********** INTEREST ***********/
+.interestInformation {
+    display: none;
+}
+
+
+/********** CLASSES **************/
+.column {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+
+    padding: 10px;
+    margin-top: 0px;
+
+    text-align: center;
+}
+
+.header {
+    height: 160px;
+}
+
+
+/*********** ID'S **************/
+
+#you{
+    text-align: center;
+}
+
+#goingTo{
+    text-align: center;
+} 
+
+#yourGroups{
+    text-align: center;
+}
+
+/**********************************/

@@ -1,0 +1,95 @@
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #C7CEDB;
+}
+
+#profileButton {
+    display: inline-block;
+    float: right;
+
+    height: 64px;
+    width: 64px;
+
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: -100px;
+    padding: 5px;
+
+    border: 1px solid #2E3532;
+    border-width: thick;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    background-color: #C7CEDB;
+}
+
+#profileButton:hover {
+    cursor: pointer;
+}
+
+#dirButtons {
+    margin-top: -45px;
+}
+
+#thisDirect {
+    cursor: context-menu;
+    height: 30px;
+    background-color: #6D7993;
+}
+
+#pageTitle {
+    margin-top: 15px;
+}
+
+/***************************/
+
+.direct{
+    background-color: #9099A2;
+    border: 1px solid #2E3532;
+    color: black;
+    border-radius: 5px;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.direct:hover {
+    cursor: pointer;
+}
+
+.header {
+    padding: 5px;
+    background: #41658A;
+    color: black;
+
+    font-size: 30px;
+    text-align: center;
+
+    border-radius: 5px;
+
+    height: 150px;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*********scrollbar ********/
+
+::-webkit-scrollbar {
+    background-color: #063852;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9E90A2;
+    outline: 1px solid slategrey;
+    border-radius: 5px;
+}

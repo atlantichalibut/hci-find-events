@@ -2,7 +2,8 @@
 <html lang="en-CA">
 
 <head>
-	<title>EF: You</title>
+	<title>DB's Profile Page</title>
+	<link rel = "stylesheet" type = "text/css" href = "allPages.css">
 	<link rel="stylesheet" type="text/css" href="profilepage.css">
 	<script src="profilepage.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
@@ -13,10 +14,13 @@
 <body onload = "start();">
 
 	<div class = "header">
-		<h1> YOUR PROFILE </h1>
-		<button>GROUPS</button>
-		<button onclick="window.location.href='main.html'">HOME</button>
-		<button onclick="window.location.href='events.html'">EVENTS</button>
+		<img id="profileButton" src="intPics/profileIcon.png">
+		<h1 id="pageTitle"> PROFILE </h1>
+		<div id="dirButtons">
+			<button class="direct" onclick="window.location.href='groupspage.html'">GROUPS</button>
+			<button class="direct" onclick="window.location.href='index.html'">HOME</button>
+			<button class="direct" onclick="window.location.href='events.html'">EVENTS</button>
+		</div>
 	</div>
 
 	<div class ="row">
@@ -46,65 +50,6 @@
 	</div>
 
 	<div id="colorDummy" style="display:none;"></div>	<!- This is used in the js file to compare colour values->
-
-	<div class="interestInformation">
-		<div class="interest">
-			<h2 id="title">Soccer </h2>
-			<img src = "intPics/soccer.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Fishing  </h2>
-			<img src = "intPics/fishing.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Ink Brewing </h2>
-			<img src = "intPics/ink.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Computer Repair  </h2>
-			<img src = "intPics/computer.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Video Games </h2>
-			<img src = "intPics/vids.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Tennis </h2>
-			<img src = "intPics/tennis.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Fine Dining </h2>
-			<img src = "intPics/dining.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Dogs </h2>
-			<img src = "intPics/dog.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Mixed Martial Arts </h2>
-			<img src = "intPics/boxing.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Country Music </h2>
-			<img src = "intPics/country.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Basket Weaving </h2>
-			<img src = "intPics/basket.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Partying </h2>
-			<img src = "intPics/party.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Aqua Fitness </h2>
-			<img src = "intPics/aqua.png">
-		</div>
-		<div class="interest">
-			<h2 id="title">Cross Country </h2>
-			<img src = "intPics/running.png">
-		</div>
-	</div>
 </body>
 
 </html>

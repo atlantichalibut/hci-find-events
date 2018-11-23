@@ -2,19 +2,19 @@
 /*******CSS FOR PROFILE PAGE*******/
 
 body {
-    background-color: #011A27;
+    background-color: #C7CEDB;
 }
 
 h2 {
-    color: #F0810F;
-    background-color: #063852;
+    color: black;
+    background-color: #9099A2;
     text-align: center;
     height: 30px;
     border-radius: 5px;
 }
 
 hr {
-	color: #063852;
+	color: black;
 }
 
 ol li{
@@ -22,10 +22,16 @@ ol li{
 }
 
 input[type=text] {
+    width: 30%;
+    height: 25px;
+
+    padding: 6px 5px;
+    margin: 0px;
+    display: inline-block;
+    text-align: left;
+
     border: 2px solid #404040;
     border-radius: 4px;
-    color: black;
-    height: 20px;
 }
 
 
@@ -36,18 +42,21 @@ input[type=text] {
     text-align: left;
     padding: 10px;
     width: 40%;
-    color: #F0810F;
-    background-color: #011A27;
+    color: black;
+    background-color: #C7CEDB;
 }
 
 .bigRight {
 	float: right;
 	width: 55%;
 	height: 80%;
+
+    margin-top: 30px;
 }
 
 .topLeft {
 	height: 15%;
+    margin-top: 30px;
 }
 
 .bottomLeft {
@@ -62,11 +71,16 @@ input[type=text] {
 }
 
 .header {
-    padding: 10px;
-    text-align: center;
+    padding: 5px;
+    background: #41658A;
+    color: black;
+
     font-size: 30px;
-    background-color: #063852;
-    color: #F0810F;
+    text-align: center;
+
+    border-radius: 5px;
+
+    height: 150px;
 }
 
 .body {
@@ -75,26 +89,15 @@ input[type=text] {
 
 p.yourInfo {
 	border: 1px double #404040;
-	height: 100px;
+	height: 120px;
 	padding: 10px;
+
+    border-radius: 5px;
+    font-size: 20px;
+
+    padding-left: 15px;
 }
 
-.seeMore {
-	font-size: 80%;
-	text-decoration: underline;
-    border: none;
-    float: right;
-    color: #F0810F;
-    background-color: #063852;
-    padding: 6px;
-    margin-left: 40%;
-}
-
-.seeMore:hover {
-	color: #E6DF44;
-	cursor: pointer;
-    border: none;
-}
 
 .interestInformation {
     display: none;
@@ -121,38 +124,57 @@ p.yourInfo {
     display: inline-block;
 }
 
+.direct{
+    background-color: #9099A2;
+    border: 1px solid #2E3532;
+    color: black;
+    border-radius: 5px;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.direct:hover {
+    cursor: pointer;
+}
+
 /*************** ID's **************/
 
 #otherIntList {
     list-style-type: none;
     padding: 2px;
-    height: 540px;
-
+    height: 535px;
 
     overflow:hidden; 
     overflow-y:scroll;
 }
 
 #otherIntList li {
+    padding: 15px;
+    margin: 8px;
     display: inline-block;
-    width: 40%;
+    width: 42%;
     border: 1px solid #404040;
     border-radius: 5px;
-    padding: 15px;
-    margin: 5px;
+
+    background-color: #41658A;
 
     cursor: pointer;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #yourIntList {
     list-style-type: none;
     padding: 2px;
     margin: 0;
-    height: 340px;
+    height: 345px;
+
+    border-radius: 5px;
 
     overflow:hidden; 
     overflow-y:scroll;
@@ -163,17 +185,17 @@ p.yourInfo {
     border: 1px solid #404040;
     border-radius: 5px;
     padding: 15px;
-    margin: 5px;
+    margin: 8px;
+
+    background-color: #41658A;
 
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     overflow: hidden;
-}
 
-#yourIntList:hover + #redX {
-    display: inline-block;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #addButton {
@@ -183,17 +205,25 @@ p.yourInfo {
 
     border: 2px solid #404040;
     border-radius: 20px;
-    color: #8e4600;
-    background-color: #011A27;
+
+    color: #404040;
+    background-color: #6D7993;
 }
 
 #otherInput #yourInput{
     margin: 10px;
     color: #9E90A2;
+    border-radius: 5px;
+}
 
+#dirButtons {
+    margin-top: -45px;
 }
 
 
+#pageTitle {
+    margin-top: 15px;
+}
 
 /************ Stuff for the scroll bars *********/
 
