@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-CA">       
+
+<head>
+    <title>Dan Bland's Epic Event Finder</title>
+    <link rel="stylesheet" type="text/css" href="allPages.css">
+    <link rel="stylesheet" type="text/css" href="groupspage.css">
+    <script src="groupspage.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+    </script>
+</head>
+
+<body onload="start()">
+
+    <div class="header">
+        <img id="profileButton" onclick="window.location.href='profilepage.html'" src="intPics/profileIcon.png">
+        <h1 id="pageTitle">GROUPS</h1>
+        <div id="dirButtons">
+            <button class="direct" id="thisDirect">GROUPS</button>
+            <button class="direct" onclick="window.location.href='index.html'">HOME</button>
+            <button class="direct" onclick="window.location.href='events.html'">EVENTS</button>
+        </div>
+    </div>
+
+    <div class="groupNav">
+
+        <button class="tab" onclick="openTab(event, 'yourGroups')">
+            YOUR GROUPS
+        </button>
+
+        <button class="tab active" onclick="openTab(event, 'browseGroups')">
+            BROWSE GROUPS
+        </button>
+
+        <button class="tab" onclick="openTab(event, 'createGroup')">
+            CREATE A GROUP
+        </button>
+    </div>
+
+
+    <div class="tabContent" id="browseGroups">
+        <div class ="row">
+            <div class ="column side">
+                <input type="text" id="otherGroupsInput" onkeyup="selectGroup('otherGroupsInput', 'otherGroupList')" placeholder="Search for a group.." title="Type in a name">
+                <nav id = "scrollNav">
+                    <ul id = "otherGroupList"></ul>
+                </nav>
+            </div>
+
+            <div class = "column main">
+                <div class = "mainInfo">
+                    <h2 id = "newOtherDisplay">Please Select a Group</h2>
+
+                </div>
+
+                <div class = "mainImg">
+                        <img id="newGroupImg" class="groupImg" src="">
+                        <p id="groupDescription"></p>
+                </div>
+
+                <div class = "suppRegister">
+                    <button id="joinButton" type="button" onclick="leaveGroup()">JOIN GROUP</button>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div class="tabContent" id="yourGroups">
+        <h3> NOT IMPLEMENTED </h3>
+    </div>
+
+    <div class="tabContent" id="createGroup">
+        <h3> NOT IMPLEMENTED </h3>
+    </div>
+
+    <div class="groupInformation">
+        <div class = "group">
+            <h2 id = "title">Park Walkers</h2>
+            <img src = "eventPics/applePicking.jpg" alt="apples"> 
+            <p class= "descript">We just love parks! We meet weekly at St. Vital park for long walks and pleasant chit-chat. We are known to have outings to other parks, and we always visit Assiniboine park in the spring to smell the flowers.
+            </p>
+        </div>
+        <div class = "group">
+            <h2>Tim's Hat Enthusiasts</h2>
+            <img src = "groupPics/hat.png" alt="eel">
+            <p class= "descript">We're crazy about hats! Big and tall, low and small we love them all! We get together once a week to get coffee and just hang out. Some past events include leather manufacturing and feather picking.
+            </p>
+        </div>
+        <div class = "group">
+            <h2>Board Game Enthusiasts</h2>
+            <img src ="eventPics/dungeonsAndDragons.jpg" alt="paper and dice"> 
+            <p class= "descript">Orcs and Dragons, Ghouls and Goblins, anything is possible with pen and paper fun!
+                We're a group of nerds with a desire to grow our board game friend group.
+            </p>
+        </div>
+        <div class = "group">
+            <h2>Chair Peeps</h2>
+            <img src ="groupPics/chair.png" alt="Chair Pic"> 
+            <p class= "descript"> Chairs are the greatest invention known to mankind. Come to one of our weekly seminars where we sit, discuss chair news and share our favourite seats! <br/> We talk a lot about chairs, but we also go out as a group to shop for chairs, and sometimes scavenge at the dump!
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
